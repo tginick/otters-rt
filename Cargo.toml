@@ -20,7 +20,7 @@ cbindgen = "0.14"
 bindgen = "0.54.0" # for math_neon bindings
 
 [dependencies]
-fftw = { path = "../fftw/fftw" }
+fftw = { path = "./fftw/fftw" }
 libc = "0.2"
 libm = "0.2"
 num = "0.3"
