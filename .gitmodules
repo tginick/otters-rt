@@ -1,0 +1,3 @@
+[submodule "fftw"]
+	path = fftw
+	url = git@github.com:tginick/fftw

@@ -1,0 +1,25 @@
+{
+    "buffers": [
+        "@SOURCE_0",
+        "@SINK_0"
+    ],
+    "effects": [
+        {
+            "bind_name": "phaser",
+            "effect_name": "Modulation/Phaser",
+            "config": [],
+            "enabled": true
+        }
+    ],
+    "connections": [
+        {
+            "effect": "phaser",
+            "reads": [
+                "@SOURCE_0"
+            ],
+            "writes": [
+                "@SINK_0"
+            ]
+        }
+    ]
+}

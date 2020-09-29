@@ -1,0 +1,34 @@
+[package]
+name = "otters_rt"
+version = "0.1.0"
+authors = ["nick <tginick93@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+build = "build.rs"
+
+[[bin]]
+name = "otters_runner"
+path = "src/otters_runner.rs"
+
+[lib]
+crate-type = ["rlib", "staticlib"]
+path = "src/lib.rs"
+
+[build-dependencies]
+cbindgen = "0.14"
+bindgen = "0.54.0" # for math_neon bindings
+
+[dependencies]
+fftw = { path = "../fftw/fftw" }
+libc = "0.2"
+libm = "0.2"
+num = "0.3"
+num-traits = "0.2"
+num-derive = "0.3"
+serde = { version = "1.0", features = [ "derive" ] }
+serde_json = "1.0"
+
+# for runner
+clap = "2.33.1"
+hound = "3.4.0"

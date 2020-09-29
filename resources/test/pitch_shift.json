@@ -1,0 +1,32 @@
+{
+    "buffers": [
+        "@SOURCE_0",
+        "@SINK_0"
+    ],
+    "effects": [
+        {
+            "bind_name": "vocoder_bypass",
+            "effect_name": "PitchShifter/Ocean",
+            "config": [
+                {
+                    "name": "semitone_difference",
+                    "value": {
+                        "N": 12
+                    }
+                }
+            ],
+            "enabled": true
+        }
+    ],
+    "connections": [
+        {
+            "effect": "vocoder_bypass",
+            "reads": [
+                "@SOURCE_0"
+            ],
+            "writes": [
+                "@SINK_0"
+            ]
+        }
+    ]
+}

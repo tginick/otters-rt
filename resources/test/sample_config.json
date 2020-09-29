@@ -1,0 +1,89 @@
+{
+    "buffers": [
+        "@SOURCE_0",
+        "@SINK_0",
+        "test_buf1",
+        "test_buf2"
+    ],
+    "effects": [
+        {
+            "bind_name": "bypass1",
+            "effect_name": "Bypass/Mono",
+            "config": [],
+            "enabled": true
+        },
+        {
+            "bind_name": "delay1",
+            "effect_name": "Delay/Basic",
+            "config": [
+                {
+                    "name": "delay_time_ms",
+                    "value": {
+                        "F": 500.0
+                    }
+                },
+                {
+                    "name": "feedback_pct",
+                    "value": {
+                        "F": 0.2
+                    }
+                },
+                {
+                    "name": "wet_dry_pct",
+                    "value": {
+                        "F": 0.5
+                    }
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "bind_name": "waveshaper1",
+            "effect_name": "NonLinear/WaveShaper",
+            "config": [
+                {
+                    "name": "waveshaper_function",
+                    "value": {
+                        "N": 3
+                    }
+                },
+                {
+                    "name": "gain",
+                    "value": {
+                        "F": 4.0
+                    }
+                }
+            ],
+            "enabled": true
+        }
+    ],
+    "connections": [
+        {
+            "effect": "bypass1",
+            "reads": [
+                "@SOURCE_0"
+            ],
+            "writes": [
+                "test_buf1"
+            ]
+        },
+        {
+            "effect": "delay1",
+            "reads": [
+                "test_buf1"
+            ],
+            "writes": [
+                "test_buf2"
+            ]
+        },
+        {
+            "effect": "waveshaper1",
+            "reads": [
+                "test_buf2"
+            ],
+            "writes": [
+                "@SINK_0"
+            ]
+        }
+    ]
+}
