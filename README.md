@@ -84,13 +84,13 @@ Declares the buffers that will be used to store intermediate data between effect
 * @SOURCE_N where N is [0,9] are buffers of data that come from outside of Otters.
 * @SINK_N where N is [0,9] are buffers that will be passed back to the host for processing.
 
-*It's important to not treat these as scratch area. It may be the case that a source pointer is also a sink pointer*
+*It's important to not treat these as scratch area. The host may reuse memory space for source and sink buffers*
 
 ### effects
 Declares the effects that will be used.
 
 * bind_name: The name that will be used to refer to this effect in the *connections* list
-* effect_name: The name of the actual effect. (e.g. bypass, distortion, phasor)
+* effect_name: The name of the actual effect. (e.g. bypass, distortion, phaser)
 * config: The default parameters for the effect
     * name: the name of the parameter
     * value: the value of the parameter. This is an object containing a single key value pair.
