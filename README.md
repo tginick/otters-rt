@@ -28,12 +28,21 @@ Many of these effects are derived from algorithms presented in Will Pirkle's boo
 
 To build the otters_rt library:
 * Rust (1.44 was used for development)
+* A working GCC installation
 
 ## Setup
 
 For otters_rt:
 
 * Nothing, once you have Rust, you're good to go. Make sure you cloned the fftw submodule though.
+
+## Build Steps
+
+* In the root directory, run `cargo build --release`
+
+If you'd like to build otters_runner for other architectures, you may need to specify the linker explicitly.
+
+e.g. `RUSTFLAGS="-C linker=/opt/elk/1.0/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-elk-linux/aarch64-elk-linux-ld" cargo build --release --target=aarch64-unknown-linux-gnu`
 
 # Configuration
 
