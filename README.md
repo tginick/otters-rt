@@ -27,7 +27,7 @@ Many of these effects are derived from algorithms presented in Will Pirkle's boo
 ## What You Need
 
 To build the otters_rt library:
-* Rust (1.44 was used for development)
+* Rust (1.46 was used for development)
 * A working GCC installation
 
 ## Setup
