@@ -1,4 +1,6 @@
+mod arm {
 include!(concat!(env!("OUT_DIR"), "/math_neon.rs"));
+}
 
 pub fn vsinf(v: f32) -> f32 {
     unsafe { arm::sinf_neon_hfp(v) }
