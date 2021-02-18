@@ -1,5 +1,3 @@
-use std::os::raw;
-
 include!(concat!(env!("OUT_DIR"), "/math_neon.rs"));
 
 pub fn vsinf(v: f32) -> f32 {
@@ -34,5 +32,5 @@ pub fn vexpf(v: f32) -> f32 {
 }
 
 pub fn vsqrtf(v: f32) -> f32 {
-    v.powf(0.5f)
+    v.powf(0.5f32)
 }
